@@ -1,4 +1,4 @@
-# nuxt-vuetify-starter
+# nuxt-univ-vuetify-start-v0.2
 
 develop-github\nuxt(node12.18.0)\nuxt-start
 node:v12.18.0
@@ -51,7 +51,35 @@ create-nuxt-app v2.15.0
 2.sass
 3.sass 変数
 
-# 1.pug
+## setup
+
+## GitHub リポジトリを clone してローカルプロジェクト作る
+
+1. リモートリポジトリを clone する。
+
+```
+    git clone https://github.com/hiramatsuYoshiaki/nuxt-univ-vuetify-start-v0.1.git
+```
+
+2. インストールする
+
+```
+    npm install
+```
+
+3. サーバーを立ち上げて確認
+
+```
+   npm run dev
+```
+
+4. ローカルサーバーへアクセス
+
+```
+   http://localhost:3000/で確認する。
+```
+
+## 1.pug インストール
 
 https://qiita.com/amishiro/items/38fe1b102d7e91a93ada
 
