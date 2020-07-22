@@ -1,6 +1,6 @@
 <template lang="pug">
     v-app(id="baseline")
-        v-navigation-drawer(v-model="drawer" app dark mobile-break-point )  
+        v-navigation-drawer(v-model="drawer" app dark mobile-breakpoint )  
             v-list(dense) 
                 v-list-item(v-for="(item,i) in items" :key="i" :to="item.to")
                         v-list-item-action 
