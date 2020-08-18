@@ -1,6 +1,6 @@
 <template lang="pug">
     v-app(id="baseline")
-        v-navigation-drawer(v-model="drawer" app dark mobile-break-point bottom)  
+        v-navigation-drawer(v-model="drawer" app dark mobile-breakpoin bottom)  
             v-list(dense) 
                 v-list-item(link to="/" nuxt) 
                         v-list-item-action 
@@ -18,7 +18,7 @@
                         v-list-item-content 
                                 v-list-item-title Responsive
                
-        v-app-bar(app) 
+        v-app-bar(app ) 
             v-app-bar-nav-icon(@click.stop="drawer = !drawer") 
             v-toolbar-title Vuetify.js  
             v-spacer 

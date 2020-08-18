@@ -1,7 +1,7 @@
 # nuxt-univ-vuetify-start-v0.2
 
-develop-github\nuxt(node12.18.0)\nuxt-start
-node:v12.18.0
+develop-github\nuxt(node12.18.0)\nuxt-start  
+node:v12.18.0  
 npm v6.14.4
 
 ## Build Setup

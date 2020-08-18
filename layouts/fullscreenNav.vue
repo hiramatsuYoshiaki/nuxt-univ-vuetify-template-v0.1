@@ -1,6 +1,6 @@
 <template lang="pug">
     v-app(id="baseline")
-        v-navigation-drawer(v-model="drawer" app dark mobile-break-point bottom stateless width="100%")  
+        v-navigation-drawer(v-model="drawer" app dark mobile-breakpoin bottom stateless width="100%")  
             v-list(dense) 
                 v-list-item(link to="/" nuxt) 
                         v-list-item-action 

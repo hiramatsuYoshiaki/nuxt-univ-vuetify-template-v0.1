@@ -5,23 +5,23 @@
                     h1 Nuxt Responsive Pattern
             v-row
                 v-col
-                    nuxt-link(to="/respPattern/mostlyFluid") 
+                    nuxt-link(to="respPattern/mostlyFluid") 
                         h1  MostlyFluid 
             v-row
                 v-col
-                    nuxt-link(to="/respPattern/columnDrop") 
+                    nuxt-link(to="respPattern/columnDrop") 
                         h1  Column drop 
             v-row
                 v-col
-                    nuxt-link(to="/respPattern/layoutShifter") 
+                    nuxt-link(to="respPattern/layoutShifter") 
                         h1  Layout shifter
             v-row
                 v-col
-                    nuxt-link(to="/respPattern/tinyTweaks") 
+                    nuxt-link(to="respPattern/tinyTweaks") 
                         h1  Tiny tweaks 
             v-row
                 v-col
-                    nuxt-link(to="/respPattern/offCanvas") 
+                    nuxt-link(to="respPattern/offCanvas") 
                         h1  Off canvas 
 </template>
 <script>

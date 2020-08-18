@@ -55,6 +55,16 @@ export default {
           title: 'UI COMPONENT',
           to: '/component',
         },
+        {
+          icon: 'fas fa-th-large',
+          title: 'APP LAYOUT',
+          to: '/appLayout',
+        },
+        {
+          icon: 'far fa-window-maximize',
+          title: 'PAGE TENPLATE',
+          to: '/template',
+        },
       ],
     }
   },
