@@ -277,6 +277,132 @@ v-container(fluid)
                             h6 ultra-wides
     v-row 
         v-col(cols="12")
+            v-btn(@click="isOpen1LineLayout=!isOpen1LineLayout")
+                span.text-h3.mr-4.d-inline-block  1-Line Layouts
+                span.text-h5.mr-4.pa-1.d-inline-block.purple.white--text  Glitch
+                v-icon(v-show="!isOpen1LineLayout") fas fa-angle-down
+                v-icon(v-show="isOpen1LineLayout") fas fa-angle-up
+    v-row(v-show="isOpen1LineLayout") 
+        v-col(cols="12" sm="12" md="12" lg="12" xl="12") 
+            v-sheets.d-flex.flex-wrap
+                v-card( width="600px" min-height="700px" flat color="grey lighten-3" ).pa-6.flex-grow-1.flex-shrink-1  
+                    v-card-title.text-h3 01 Super Centered 
+                    v-card-subtitle
+                        h5.text-h5 display: grid
+                        h5.text-h5 place-items: center
+                    v-card-action
+                        div.wrape
+                                div.parent
+                                    div.child(contenteditable) :) Super Centered  
+                v-card( width="600px"  min-height="700px" flat color="grey lighten-3").pa-6.flex-grow-1.flex-shrink-1  
+                    v-card-title.text-h6 
+                        span Current Browser Support:
+                    v-card-subtitle.text-h5
+                        v-chip-group(row) 
+                            v-chip Edge 
+                            v-chip Firefox  
+                            v-chip Chrome  
+                            v-chip Safari 
+                    v-card-text.text-h6 
+                        v-tabs(v-model="tab1"  background-color="purple lighten-5" color="deep-purple accent-4" right) 
+                            v-tab(v-for="(item,ix1) in items" :key="ix1" ) {{item}}
+                            v-tabs-items(v-model="tab1") 
+                                v-tab-item
+                                    v-card(outlined height="460px" ).obf
+                                        v-card-text 
+                                            pre 
+                                                //- code 
+                                                div.text-h4 div.parent
+                                                div.text-h4      div.child(contenteditable)
+                                                div.text-h4          :) Super Centered
+                                                //- h5.text-h5 &lt; /template &gt; 
+                                v-tab-item
+                                    v-card(outlined height="460px" ).obf
+                                        v-card-text
+                                            pre 
+                                                //- code 
+                                                div.text-h4 .parent {
+                                                div.text-h4     display: grid;
+                                                div.text-h4     place-items: center;
+                                                div.text-h4     background: lightblue;
+                                                div.text-h4     width: 500px;
+                                                div.text-h4     height: 500px; 
+                                                div.text-h4     resize: both; 
+                                                div.text-h4     overflow: auto;
+                                                div.text-h4 } 
+                                                div.text-h4 .child {
+                                                div.text-h4     padding: 0.5rem;
+                                                div.text-h4     border-radius: 10px;
+                                                div.text-h4     border: 1px solid red;
+                                                div.text-h4     background: lightpink;
+                                                div.text-h4     height: 500px; 
+                                                div.text-h4     font-size: 2rem;
+                                                div.text-h4     text-align: center;
+                                                div.text-h4 } 
+        v-col(cols="12" sm="12" md="12" lg="12" xl="12") 
+            v-sheets.d-flex.flex-wrap(color="grey lighten-3" )
+                v-card( width="600px" min-height="700px" flat color="grey lighten-3" ).pa-6.flex-grow-1.flex-shrink-1  
+                    v-card-title.text-h3 02 The Deconstructed Pancake 
+                    v-card-subtitle
+                        h5.text-h5 display: flex
+                        h5.text-h5 flex: 0 1 base-width
+                    v-card-action
+                        div.wrape
+                                div.parent2
+                                    div.child2 1 
+                                    div.child2 2 
+                                    div.child2 3 
+                v-card( width="600px"  min-height="700px" flat color="grey lighten-3").pa-6.flex-grow-1.flex-shrink-1  
+                    v-card-title.text-h6 
+                        span Current Browser Support:
+                    v-card-subtitle.text-h5
+                        v-chip-group(row) 
+                            v-chip Edge 
+                            v-chip Firefox  
+                            v-chip Chrome  
+                            v-chip Safari 
+                    v-card-text.text-h6 
+                        v-tabs(v-model="tab1"  background-color="purple lighten-5" color="deep-purple accent-4" right) 
+                            v-tab(v-for="(item,ix1) in items" :key="ix1" ) {{item}}
+                            v-tabs-items(v-model="tab1") 
+                                v-tab-item
+                                    v-card(outlined height="460px" ).obf
+                                        v-card-text 
+                                            pre 
+                                                //- code 
+                                                div.text-h4 div.parent2
+                                                div.text-h4      div.child2 1
+                                                div.text-h4      div.child2 2
+                                                div.text-h4      div.child2 3
+                                v-tab-item
+                                    v-card(outlined height="460px" ).obf
+                                        v-card-text
+                                            pre 
+                                                //- code 
+                                                div.text-h4 .parent2 {
+                                                div.text-h4     display: flex;
+                                                div.text-h4     flex-wrap: wrap;
+                                                div.text-h4     justify-content: center;
+                                                div.text-h4     align-items: center;
+                                                div.text-h4     width: 500px;
+                                                div.text-h4     height: 500px;
+                                                //- div.text-h4     justify-content: center;
+                                                div.text-h4 } 
+                                                div.text-h4 .child2 {
+                                                div.text-h4     flex: 0 1 150px;
+                                                div.text-h4     border: 1px solid green;
+                                                div.text-h4     background: lightgreen;
+                                                div.text-h4     height: 150px;
+                                                div.text-h4     border-radius: 10px;
+                                                div.text-h4     margin: 8px;
+                                                div.text-h4     text-align: center;
+                                                div.text-h4     font-size: 2rem;
+                                                div.text-h4 } 
+                                                
+                                                
+                  
+    v-row 
+        v-col(cols="12")
             //- v-btn.text-h3.pa-4(href="https://csslayout.io/patterns/")  CSS LAYOUT パターン
             v-btn(@click="isOpenCSSLayout=!isOpenCSSLayout")
                 span.text-h3.mr-4.d-inline-block  LAYOUT 
@@ -831,7 +957,6 @@ v-container(fluid)
                                         v-chip(href="https://vuetifyjs.com/ja/components/tabs/") v-tab  
                                         v-chip(href="https://vuetifyjs.com/ja/components/tabs/") v-tabs-items                         
                                         v-chip(href="https://vuetifyjs.com/ja/components/tabs/") v-tab-items                         
-                                        //- v-chip(href="https://vuetifyjs.com/ja/components/tabs/") v-tabs-slider                     
             v-col(cols="12" sm="12" md="12" lg="6" xl="4")
                     v-card(color="grey lighten-1").pa-6 
                         div(class="d-flex flex-no-wrap justify-space-between")
@@ -919,6 +1044,18 @@ export default {
       isOpenResponsivePattern: false,
       isOpenCSSLayout: false,
       isOpenCSSNavigation: false,
+      isOpen1LineLayout: false,
+      tab1: 0,
+      tab2: 0,
+      tab3: 0,
+      tab4: 0,
+      tab5: 0,
+      tab6: 0,
+      tab7: 0,
+      tab8: 0,
+      tab9: 0,
+      tab10: 0,
+      items: ['HTML(pug)', 'CSS(scss)'],
     }
   },
 }
@@ -1375,5 +1512,71 @@ export default {
 .xl-oc-c3 {
   width: 100%;
   height: 120px;
+}
+.card-relative {
+  position: relative;
+}
+.wrape {
+  position: relative;
+}
+// 01 super centered
+.parent {
+  display: grid;
+  place-items: center;
+
+  background: lightblue;
+  width: 500px;
+  height: 500px;
+
+  resize: both;
+  overflow: auto;
+
+  position: absolute;
+  z-index: 1;
+}
+
+.child {
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: 1px solid red;
+  background: lightpink;
+  font-size: 2rem;
+  text-align: center;
+}
+.obf {
+  overflow-y: scroll;
+}
+// 02 The Deconstructed Pancake
+.parent2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 500px;
+
+  resize: both;
+  overflow: auto;
+
+  position: absolute;
+  z-index: 1;
+  border: 1px solid grey;
+}
+
+.child2 {
+  //  flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]
+  //  If we don't want the items to stretch:
+  flex: 0 1 150px;
+  //  If we do want the items to stretch:
+  //   flex: 1 1 300px;
+
+  //   etc.
+  border: 1px solid green;
+  background: lightgreen;
+  height: 150px;
+  border-radius: 10px;
+  margin: 8px;
+  text-align: center;
+  font-size: 2rem;
 }
 </style>
