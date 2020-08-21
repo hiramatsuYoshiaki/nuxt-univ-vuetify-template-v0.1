@@ -299,10 +299,10 @@ v-container(fluid)
                         span Current Browser Support:
                     v-card-subtitle.text-h5
                         v-chip-group(row) 
-                            v-chip Edge 
-                            v-chip Firefox  
-                            v-chip Chrome  
-                            v-chip Safari 
+                            v-chip(color="green lighten-3") Edge 
+                            v-chip(color="green lighten-3") Firefox  
+                            v-chip(color="green lighten-3") Chrome  
+                            v-chip(color="green lighten-3") Safari 
                     v-card-text.text-h6 
                         v-tabs(v-model="tab1"  background-color="purple lighten-5" color="deep-purple accent-4" right) 
                             v-tab(v-for="(item,ix1) in items" :key="ix1" ) {{item}}
@@ -345,7 +345,7 @@ v-container(fluid)
                     v-card-title.text-h3 02 The Deconstructed Pancake 
                     v-card-subtitle
                         h5.text-h5 display: flex
-                        h5.text-h5 flex: 0 1 base-width
+                        h5.text-h5 flex: 0 1 150px // flex-grow flex-shrink flex-basis
                     v-card-action
                         div.wrape
                                 div.parent2
@@ -357,14 +357,14 @@ v-container(fluid)
                         span Current Browser Support:
                     v-card-subtitle.text-h5
                         v-chip-group(row) 
-                            v-chip Edge 
-                            v-chip Firefox  
-                            v-chip Chrome  
-                            v-chip Safari 
+                            v-chip(color="green lighten-3") Edge 
+                            v-chip(color="green lighten-3") Firefox  
+                            v-chip(color="green lighten-3") Chrome  
+                            v-chip(color="green lighten-3") Safari 
                     v-card-text.text-h6 
-                        v-tabs(v-model="tab1"  background-color="purple lighten-5" color="deep-purple accent-4" right) 
+                        v-tabs(v-model="tab2"  background-color="purple lighten-5" color="deep-purple accent-4" right) 
                             v-tab(v-for="(item,ix1) in items" :key="ix1" ) {{item}}
-                            v-tabs-items(v-model="tab1") 
+                            v-tabs-items(v-model="tab2") 
                                 v-tab-item
                                     v-card(outlined height="460px" ).obf
                                         v-card-text 
@@ -386,7 +386,6 @@ v-container(fluid)
                                                 div.text-h4     align-items: center;
                                                 div.text-h4     width: 500px;
                                                 div.text-h4     height: 500px;
-                                                //- div.text-h4     justify-content: center;
                                                 div.text-h4 } 
                                                 div.text-h4 .child2 {
                                                 div.text-h4     flex: 0 1 150px;
@@ -398,7 +397,605 @@ v-container(fluid)
                                                 div.text-h4     text-align: center;
                                                 div.text-h4     font-size: 2rem;
                                                 div.text-h4 } 
-                                                
+        v-col(cols="12" sm="12" md="12" lg="12" xl="12") 
+            v-sheets.d-flex.flex-wrap(color="grey lighten-3" )
+                v-card( width="600px" min-height="700px" flat color="grey lighten-3" ).pa-6.flex-grow-1.flex-shrink-1  
+                    v-card-title.text-h3 03 Sidebar Says 
+                    v-card-subtitle
+                        h5.text-h5 display: grid
+                        h5.text-h5 grid-template-columns: minmax(150px, 25%) 1fr
+                    v-card-action
+                        div.wrape
+                                div.parent3
+                                    div.sidebar(contenteditable) Min: 150px / Max: 25%
+                                    div.content(contenteditable) 
+                                        span This element takes the second grid position (1fr),
+                                        span meaning it takes up the rest of the remaining space.
+                v-card( width="600px"  min-height="700px" flat color="grey lighten-3").pa-6.flex-grow-1.flex-shrink-1  
+                    v-card-title.text-h6 
+                        span Current Browser Support:
+                    v-card-subtitle.text-h5
+                        v-chip-group(row) 
+                            v-chip(color="green lighten-3") Edge 
+                            v-chip(color="green lighten-3") Firefox  
+                            v-chip(color="green lighten-3") Chrome  
+                            v-chip(color="green lighten-3") Safari 
+                    v-card-text.text-h6 
+                        v-tabs(v-model="tab3"  background-color="purple lighten-5" color="deep-purple accent-4" right) 
+                            v-tab(v-for="(item,ix1) in items" :key="ix1" ) {{item}}
+                            v-tabs-items(v-model="tab3") 
+                                v-tab-item
+                                    v-card(outlined height="460px" ).obf
+                                        v-card-text 
+                                            pre 
+                                                //- code 
+                                                div.text-h4 div.parent3
+                                                div.text-h4      div.sidebar(contenteditable) Min: 150px / Max: 25%
+                                                div.text-h4      div.content(contenteditable)
+                                                div.text-h4         span This element takes the second grid position (1fr),
+                                                div.text-h4         span meaning it takes up the rest of the remaining space.
+                                v-tab-item
+                                    v-card(outlined height="460px" ).obf
+                                        v-card-text
+                                            pre 
+                                                //- code 
+                                                div.text-h4 .parent3 {
+                                                div.text-h4     display: grid;
+                                                div.text-h4     grid-template-columns: minmax(150px, 25%) 1fr;
+                                                div.text-h4     align-items: center;
+                                                div.text-h4     width: 500px;
+                                                div.text-h4     height: 500px;
+                                                div.text-h4 } 
+                                                div.text-h4 .parent3 .sidebar {
+                                                div.text-h4     height: 100%;
+                                                div.text-h4     background: lightyellow;
+                                                div.text-h4     font-size: 2rem;
+                                                div.text-h4     text-align: center;
+                                                div.text-h4 } 
+                                                div.text-h4 .parent3 .content {
+                                                div.text-h4     height: 100%;
+                                                div.text-h4     background: lightgray;
+                                                div.text-h4     padding: 2rem;
+                                                div.text-h4     font-size: 2rem;
+                                                div.text-h4 } 
+        v-col(cols="12" sm="12" md="12" lg="12" xl="12") 
+            v-sheets.d-flex.flex-wrap(color="grey lighten-3" )
+                v-card( width="600px" min-height="700px" flat color="grey lighten-3" ).pa-6.flex-grow-1.flex-shrink-1  
+                    v-card-title.text-h3 04 Pancake Stack 
+                    v-card-subtitle
+                        h5.text-h5 display: grid
+                        h5.text-h5 grid-template-rows: auto 1fr auto
+                    v-card-action
+                        div.wrape
+                                div.parent4
+                                    header(contenteditable) Header track-side auto
+                                    main(contenteditable) Main track-side 1fr aaa 
+                                    footer(contenteditable) Footer track-side auto 
+                v-card( width="600px"  min-height="700px" flat color="grey lighten-3").pa-6.flex-grow-1.flex-shrink-1  
+                    v-card-title.text-h6 
+                        span Current Browser Support:
+                    v-card-subtitle.text-h5
+                        v-chip-group(row) 
+                            v-chip(color="green lighten-3") Edge 
+                            v-chip(color="green lighten-3") Firefox  
+                            v-chip(color="green lighten-3") Chrome  
+                            v-chip(color="green lighten-3") Safari 
+                    v-card-text.text-h6 
+                        v-tabs(v-model="tab4"  background-color="purple lighten-5" color="deep-purple accent-4" right) 
+                            v-tab(v-for="(item,ix1) in items" :key="ix1" ) {{item}}
+                            v-tabs-items(v-model="tab4") 
+                                v-tab-item
+                                    v-card(outlined height="460px" ).obf
+                                        v-card-text 
+                                            pre 
+                                                //- code 
+                                                div.text-h4 div.parent4
+                                                div.text-h4      header (contenteditable) Header track-side auto
+                                                div.text-h4      main (contenteditable) Main track-side 1fraaa
+                                                div.text-h4      footer (contenteditable) Footer track-side auto 
+                                v-tab-item
+                                    v-card(outlined height="460px" ).obf
+                                        v-card-text
+                                            pre 
+                                                //- code 
+                                                div.text-h4 .parent4 {
+                                                div.text-h4     display: grid;
+                                                div.text-h4     grid-template-rows: auto 1fr auto;
+                                                div.text-h4     align-items: center;
+                                                div.text-h4     width: 500px;
+                                                div.text-h4     height: 500px;
+                                                div.text-h4 } 
+                                                div.text-h4 .parent4 header  {
+                                                div.text-h4     background: lightblue;
+                                                div.text-h4     font-size: 2rem;
+                                                div.text-h4     padding: 2rem;
+                                                div.text-h4 } 
+                                                div.text-h4 .parent4 main  {
+                                                div.text-h4     background: lightsalmon;
+                                                div.text-h4     font-size: 2rem;
+                                                div.text-h4     padding: 2rem;
+                                                div.text-h4 } 
+                                                div.text-h4 .parent4 footer  {
+                                                div.text-h4     background: plum;
+                                                div.text-h4     font-size: 2rem;
+                                                div.text-h4     padding: 2rem;
+                                                div.text-h4 } 
+        v-col(cols="12" sm="12" md="12" lg="12" xl="12") 
+            v-sheets.d-flex.flex-wrap(color="grey lighten-3" )
+                v-card( width="600px" min-height="700px" flat color="grey lighten-3" ).pa-6.flex-grow-1.flex-shrink-1  
+                    v-card-title.text-h3 05 Classic Holy Grail Layout
+                    v-card-subtitle
+                        h5.text-h5 display: grid
+                        h5.text-h5 grid-template: auto 1fr auto / auto 1fr auto
+                    v-card-action
+                        div.wrape
+                                div.parent5
+                                    header(contenteditable) Header 
+                                    aside.leftSide(contenteditable) Left Side 
+                                    main(contenteditable) Main 
+                                    aside.rightSide(contenteditable) Right Side
+                                    footer(contenteditable) Footer 
+                v-card( width="600px"  min-height="700px" flat color="grey lighten-3").pa-6.flex-grow-1.flex-shrink-1  
+                    v-card-title.text-h6 
+                        span Current Browser Support:
+                    v-card-subtitle.text-h5
+                        v-chip-group(row) 
+                            v-chip(color="green lighten-3") Edge 
+                            v-chip(color="green lighten-3") Firefox  
+                            v-chip(color="green lighten-3") Chrome  
+                            v-chip(color="green lighten-3") Safari 
+                    v-card-text.text-h6 
+                        v-tabs(v-model="tab5"  background-color="purple lighten-5" color="deep-purple accent-4" right) 
+                            v-tab(v-for="(item,ix1) in items" :key="ix1" ) {{item}}
+                            v-tabs-items(v-model="tab5") 
+                                v-tab-item
+                                    v-card(outlined height="460px" ).obf
+                                        v-card-text 
+                                            pre 
+                                                //- code 
+                                                div.text-h4 div.parent5
+                                                div.text-h4      header(contenteditable) Header
+                                                div.text-h4      aside.leftSide(contenteditable) Main 
+                                                div.text-h4      main(contenteditable) Main 
+                                                div.text-h4      aside.main(contenteditable) Main 
+                                                div.text-h4      footer(contenteditable) Footer  
+                                v-tab-item
+                                    v-card(outlined height="460px" ).obf
+                                        v-card-text
+                                            pre 
+                                                //- code 
+                                                div.text-h4 .parent5 {
+                                                div.text-h4     display: grid;
+                                                div.text-h4     grid-template: auto 1fr auto / auto 1fr auto;
+                                                div.text-h4     align-items: center;
+                                                div.text-h4     width: 500px;
+                                                div.text-h4     height: 500px;
+                                                div.text-h4 } 
+                                                div.text-h4 .parent5 header {
+                                                div.text-h4     grid-column: 1 / 4;
+                                                div.text-h4     background: lightblue;
+                                                div.text-h4     padding: 2rem;
+                                                div.text-h4     height: 100%;
+                                                div.text-h4     font-size: 2rem;
+                                                div.text-h4 } 
+                                                div.text-h4 .parent5 aside.leftSide  {
+                                                div.text-h4     grid-column: 1 / 2;
+                                                div.text-h4     background: lightblue;
+                                                div.text-h4     padding: 2rem;
+                                                div.text-h4     height: 100%;
+                                                div.text-h4     font-size: 2rem;
+                                                div.text-h4 } 
+                                                div.text-h4 .parent5 main {
+                                                div.text-h4     grid-column: 2 / 3;
+                                                div.text-h4     background: lightsalmon;
+                                                div.text-h4     padding: 2rem;
+                                                div.text-h4     height: 100%;
+                                                div.text-h4     font-size: 2rem;
+                                                div.text-h4 } 
+                                                div.text-h4 .parent5 aside.rightSide {
+                                                div.text-h4     grid-column: 3 / 4;
+                                                div.text-h4     background: lightyellow;
+                                                div.text-h4     padding: 2rem;
+                                                div.text-h4     height: 100%;
+                                                div.text-h4     font-size: 2rem;
+                                                div.text-h4 } 
+                                                div.text-h4 .parent5 footer {
+                                                div.text-h4     grid-column: 1 / 4;
+                                                div.text-h4     background: lightgreen;
+                                                div.text-h4     padding: 2rem;
+                                                div.text-h4     height: 100%;
+                                                div.text-h4     font-size: 2rem;
+                                                div.text-h4 } 
+        v-col(cols="12" sm="12" md="12" lg="12" xl="12") 
+            v-sheets.d-flex.flex-wrap(color="grey lighten-3" )
+                v-card( width="600px" min-height="700px" flat color="grey lighten-3" ).pa-6.flex-grow-1.flex-shrink-1  
+                    v-card-title.text-h3 06. 12-Span Grid
+                    v-card-subtitle
+                        h5.text-h5 display: grid
+                        h5.text-h5 grid-template-columns: repeat(12, 1fr)
+                    v-card-action
+                        div.wrape
+                                div.parent6
+                                    div.span-12(contenteditable) Span 12 
+                                    div.span-6(contenteditable) Span 6 
+                                    div.span-4(contenteditable) Span 4 
+                                    div.span-2(contenteditable) Span 2 
+                                   
+                v-card( width="600px"  min-height="700px" flat color="grey lighten-3").pa-6.flex-grow-1.flex-shrink-1  
+                    v-card-title.text-h6 
+                        span Current Browser Support:
+                    v-card-subtitle.text-h5
+                        v-chip-group(row) 
+                            v-chip(color="green lighten-3") Edge 
+                            v-chip(color="green lighten-3") Firefox  
+                            v-chip(color="green lighten-3") Chrome  
+                            v-chip(color="green lighten-3") Safari 
+                    v-card-text.text-h6 
+                        v-tabs(v-model="tab6"  background-color="purple lighten-5" color="deep-purple accent-4" right) 
+                            v-tab(v-for="(item,ix1) in items" :key="ix1" ) {{item}}
+                            v-tabs-items(v-model="tab6") 
+                                v-tab-item
+                                    v-card(outlined height="460px" ).obf
+                                        v-card-text 
+                                            pre 
+                                                //- code 
+                                                div.text-h4 div.parent6
+                                                div.text-h4      div.span-12(contenteditable) Span 12
+                                                div.text-h4      div.span-6(contenteditable) Span 6
+                                                div.text-h4      div.span-4(contenteditable) Span 4
+                                                div.text-h4      div.span-2(contenteditable) Span 2
+                                              
+                                v-tab-item
+                                    v-card(outlined height="460px" ).obf
+                                        v-card-text
+                                            pre 
+                                                //- code 
+                                                div.text-h4 .parent6 {
+                                                div.text-h4     display: grid;
+                                                div.text-h4     grid-template-columns: repeat(12, 1fr);
+                                                div.text-h4     align-items: center;
+                                                div.text-h4     width: 500px;
+                                                div.text-h4     height: 500px;
+                                                div.text-h4 } 
+                                                div.text-h4 .parent6 div.span-12 {
+                                                div.text-h4     grid-column: 1 / span 12;
+                                                div.text-h4     background: lightgreen;
+                                                div.text-h4     padding: 2rem;
+                                                div.text-h4     height: 100%;
+                                                div.text-h4     font-size: 2rem;
+                                                div.text-h4 } 
+                                                div.text-h4 .parent6 div.span-6 {
+                                                div.text-h4     grid-column: 1 / span 6;
+                                                div.text-h4     background: lightgreen;
+                                                div.text-h4     padding: 2rem;
+                                                div.text-h4     height: 100%;
+                                                div.text-h4     font-size: 2rem;
+                                                div.text-h4 } 
+                                                div.text-h4 .parent6 div.span-4 {
+                                                div.text-h4     grid-column: 4 / span 4;
+                                                div.text-h4     background: lightgreen;
+                                                div.text-h4     padding: 2rem;
+                                                div.text-h4     height: 100%;
+                                                div.text-h4     font-size: 2rem;
+                                                div.text-h4 } 
+                                                div.text-h4 .parent6 div.span-12 {
+                                                div.text-h4     grid-column: 3 / span 2;
+                                                div.text-h4     background: lightgreen;
+                                                div.text-h4     padding: 2rem;
+                                                div.text-h4     height: 100%;
+                                                div.text-h4     font-size: 2rem;
+                                                div.text-h4 } 
+        v-col(cols="12" sm="12" md="12" lg="12" xl="12") 
+            v-sheets.d-flex.flex-wrap(color="grey lighten-3" )
+                v-card( width="600px" min-height="700px" flat color="grey lighten-3" ).pa-6.flex-grow-1.flex-shrink-1  
+                    v-card-title.text-h3 07. RAM (Repeat, Auto, Minmax)
+                    v-card-subtitle
+                        h5.text-h5 display: grid
+                        h5.text-h5 grid-template-columns: 
+                        h5.text-h5 repeat(auto-fit, minmax(<base>, 1fr))
+                    v-card-action
+                        div.wrape
+                                div.parent7
+                                    div.box.box1 1 
+                                    div.box.box2 2 
+                                    div.box.box3 3 
+                                    div.box.box4 4 
+                                   
+                v-card( width="600px"  min-height="700px" flat color="grey lighten-3").pa-6.flex-grow-1.flex-shrink-1  
+                    v-card-title.text-h6 
+                        span Current Browser Support:
+                    v-card-subtitle.text-h5
+                        v-chip-group(row) 
+                            v-chip(color="green lighten-3") Edge 
+                            v-chip(color="green lighten-3") Firefox  
+                            v-chip(color="green lighten-3") Chrome  
+                            v-chip(color="green lighten-3") Safari 
+                    v-card-text.text-h6 
+                        v-tabs(v-model="tab7"  background-color="purple lighten-5" color="deep-purple accent-4" right) 
+                            v-tab(v-for="(item,ix1) in items" :key="ix1" ) {{item}}
+                            v-tabs-items(v-model="tab7") 
+                                v-tab-item
+                                    v-card(outlined height="460px" ).obf
+                                        v-card-text 
+                                            pre 
+                                                //- code 
+                                                div.text-h4 div.parent7
+                                                div.text-h4      div.box.box1 1
+                                                div.text-h4      div.box.box2 2
+                                                div.text-h4      div.box.box3 3
+                                                div.text-h4      div.box.box4 4
+                                              
+                                v-tab-item
+                                    v-card(outlined height="460px" ).obf
+                                        v-card-text
+                                            pre 
+                                                //- code 
+                                                div.text-h4 .parent7 {
+                                                div.text-h4     display: grid;
+                                                div.text-h4     grid-gap: 1rem;
+                                                div.text-h4     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                                                div.text-h4     align-items: center;
+                                                div.text-h4     width: 500px;
+                                                div.text-h4     height: 500px;
+                                                div.text-h4 } 
+                                                div.text-h4 .parent7 div.box {
+                                                div.text-h4     display: grid;
+                                                div.text-h4     place-items: center;
+                                                div.text-h4     height: 100%;
+                                                div.text-h4     font-size: 2rem;
+                                                div.text-h4     border-radius: 10px;
+                                                div.text-h4 }
+                                                div.text-h4 .parent7 div.box1 {
+                                                div.text-h4     background: lightpink;
+                                                div.text-h4 } 
+                                                div.text-h4 .parent7 div.box2 {
+                                                div.text-h4     background: plum;
+                                                div.text-h4 } 
+                                                div.text-h4 .parent7 div.box3 {
+                                                div.text-h4     background: lightblue;
+                                                div.text-h4 } 
+                                                div.text-h4 .parent7 div.box4 {
+                                                div.text-h4     background: lightgreen;
+                                                div.text-h4 } 
+        v-col(cols="12" sm="12" md="12" lg="12" xl="12") 
+            v-sheets.d-flex.flex-wrap(color="grey lighten-3" )
+                v-card( width="600px" min-height="700px" flat color="grey lighten-3" ).pa-6.flex-grow-1.flex-shrink-1  
+                    v-card-title.text-h3 08. Line Up
+                    v-card-subtitle
+                        h5.text-h5 display: flex;
+                        h5.text-h5 justify-content: space-between; 
+                    v-card-action
+                        div.wrape
+                                div.parent8
+                                    div.card.card1 
+                                        h3 Title -Card 1 
+                                        p Medium length description with a few more words here. 
+                                        div.visual.visual1 
+                                    div.card.card2 
+                                        h3 Title -Card 2 
+                                        p Long Description. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                        div.visual.visual2 
+                                    div.card.card3 
+                                        h3 Title -Card 3 
+                                        p Short Description.
+                                        div.visual.visual3 
+                                   
+                v-card( width="600px"  min-height="700px" flat color="grey lighten-3").pa-6.flex-grow-1.flex-shrink-1  
+                    v-card-title.text-h6 
+                        span Current Browser Support:
+                    v-card-subtitle.text-h5
+                        v-chip-group(row) 
+                            v-chip(color="green lighten-3") Edge 
+                            v-chip(color="green lighten-3") Firefox  
+                            v-chip(color="green lighten-3") Chrome  
+                            v-chip(color="green lighten-3") Safari 
+                    v-card-text.text-h6 
+                        v-tabs(v-model="tab7"  background-color="purple lighten-5" color="deep-purple accent-4" right) 
+                            v-tab(v-for="(item,ix1) in items" :key="ix1" ) {{item}}
+                            v-tabs-items(v-model="tab7") 
+                                v-tab-item
+                                    v-card(outlined height="460px" ).obf
+                                        v-card-text 
+                                            pre 
+                                                //- code 
+                                                div.text-h4 div.parent8
+                                                div.text-h4      div.card.card1
+                                                div.text-h4         h3 Title -Card 1
+                                                div.text-h4         p Medium length description with a few more words here.
+                                                div.text-h4         div.visual.visual1
+                                                div.text-h4      div.card.card2
+                                                div.text-h4         h3 Title -Card 2
+                                                div.text-h4         p Long Description. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                                div.text-h4         div.visual.visual2
+                                                div.text-h4      div.card.card3
+                                                div.text-h4         h3 Title -Card 3
+                                                div.text-h4         p Short Description.
+                                                div.text-h4         div.visual.visual3
+                                              
+                                v-tab-item
+                                    v-card(outlined height="460px" ).obf
+                                        v-card-text
+                                            pre 
+                                                //- code 
+                                                div.text-h4 .parent8 {
+                                                div.text-h4     display: grid;
+                                                div.text-h4     grid-gap: 1rem;
+                                                div.text-h4     grid-template-columns: repeat(3, 1fr);
+                                                div.text-h4     align-items: center;
+                                                div.text-h4     width: 500px;
+                                                div.text-h4     height: 500px;
+                                                div.text-h4 } 
+                                                div.text-h4 .parent8 div.card {
+                                                div.text-h4     display: flex;
+                                                div.text-h4     justify-content: space-between;
+                                                div.text-h4     flex-direction: column;
+                                                div.text-h4     background-color: lightyellow;
+                                                div.text-h4     padding: 1rem;
+                                                div.text-h4     height: 400px;
+                                                div.text-h4     font-size: 2rem;
+                                                div.text-h4 }
+                                                div.text-h4 .parent8 div.visual {
+                                                div.text-h4     height: 100px;
+                                                div.text-h4     width: 100%;
+                                                div.text-h4     margin: 0.5rem 0;
+                                                div.text-h4 } 
+                                                div.text-h4 .parent8 div.visual1 {
+                                                div.text-h4     background: lightpink;
+                                                div.text-h4 } 
+                                                div.text-h4 .parent8 div.visual2 {
+                                                div.text-h4     background: plum;
+                                                div.text-h4 } 
+                                                div.text-h4 .parent8 div.visual3 {
+                                                div.text-h4     background: lighblue;
+                                                div.text-h4 } 
+        v-col(cols="12" sm="12" md="12" lg="12" xl="12") 
+            v-sheets.d-flex.flex-wrap(color="grey lighten-3" )
+                v-card( width="600px" min-height="700px" flat color="grey lighten-3" ).pa-6.flex-grow-1.flex-shrink-1  
+                    v-card-title.text-h3 09. Clamping My Style
+                    v-card-subtitle
+                        h5.text-h5 width: clamp(23ch, 50%, 46ch); 
+                    v-card-action
+                        div.wrape
+                                div.parent9
+                                    div.card.card1 
+                                        h3 Title Here 
+                                        div.visual.visual1
+                                        p Descriptive Text. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed est error repellat veritatis. 
+                                         
+                                   
+                                   
+                v-card( width="600px"  min-height="700px" flat color="grey lighten-3").pa-6.flex-grow-1.flex-shrink-1  
+                    v-card-title.text-h6 
+                        span Current Browser Support:
+                    v-card-subtitle.text-h5
+                        v-chip-group(row) 
+                            v-chip(color="green lighten-3") Edge 
+                            v-chip(color="green lighten-3") Firefox  
+                            v-chip(color="green lighten-3") Chrome  
+                            v-chip(color="red lighten-3") Safari 
+                    v-card-text.text-h6 
+                        v-tabs(v-model="tab7"  background-color="purple lighten-5" color="deep-purple accent-4" right) 
+                            v-tab(v-for="(item,ix1) in items" :key="ix1" ) {{item}}
+                            v-tabs-items(v-model="tab7") 
+                                v-tab-item
+                                    v-card(outlined height="460px" ).obf
+                                        v-card-text 
+                                            pre 
+                                                //- code 
+                                                div.text-h4 div.parent8
+                                                div.text-h4      div.card.card1
+                                                div.text-h4         h3 Title -Card 1
+                                                div.text-h4         p Medium length description with a few more words here.
+                                                div.text-h4         div.visual.visual1
+                                                div.text-h4      div.card.card2
+                                                div.text-h4         h3 Title -Card 2
+                                                div.text-h4         p Long Description. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                                div.text-h4         div.visual.visual2
+                                                div.text-h4      div.card.card3
+                                                div.text-h4         h3 Title -Card 3
+                                                div.text-h4         p Short Description.
+                                                div.text-h4         div.visual.visual3
+                                              
+                                v-tab-item
+                                    v-card(outlined height="460px" ).obf
+                                        v-card-text
+                                            pre 
+                                                //- code 
+                                                div.text-h4 .parent8 {
+                                                div.text-h4     display: grid;
+                                                div.text-h4     grid-gap: 1rem;
+                                                div.text-h4     grid-template-columns: repeat(3, 1fr);
+                                                div.text-h4     align-items: center;
+                                                div.text-h4     width: 500px;
+                                                div.text-h4     height: 500px;
+                                                div.text-h4 } 
+                                                div.text-h4 .parent8 div.card {
+                                                div.text-h4     display: flex;
+                                                div.text-h4     justify-content: space-between;
+                                                div.text-h4     flex-direction: column;
+                                                div.text-h4     background-color: lightyellow;
+                                                div.text-h4     padding: 1rem;
+                                                div.text-h4     height: 400px;
+                                                div.text-h4     font-size: 2rem;
+                                                div.text-h4 }
+                                                div.text-h4 .parent8 div.visual {
+                                                div.text-h4     height: 100px;
+                                                div.text-h4     width: 100%;
+                                                div.text-h4     margin: 0.5rem 0;
+                                                div.text-h4 } 
+                                                div.text-h4 .parent8 div.visual1 {
+                                                div.text-h4     background: lightpink;
+                                                div.text-h4 } 
+                                                div.text-h4 .parent8 div.visual2 {
+                                                div.text-h4     background: plum;
+                                                div.text-h4 } 
+                                                div.text-h4 .parent8 div.visual3 {
+                                                div.text-h4     background: lighblue;
+                                                div.text-h4 } 
+        v-col(cols="12" sm="12" md="12" lg="12" xl="12") 
+            v-sheets.d-flex.flex-wrap(color="grey lighten-3" )
+                v-card( width="600px" min-height="700px" flat color="grey lighten-3" ).pa-6.flex-grow-1.flex-shrink-1  
+                    v-card-title.text-h3 10. Respect for Aspect
+                    v-card-subtitle
+                        h5.text-h5 aspect-ratio: 16 / 9;
+                    v-card-action
+                        div.wrape
+                                div.parent10
+                                    div.card
+                                        h3 Video Title 
+                                        div.visual
+                                        p Descriptive Text. This demo works in Chromium 84+. 
+                                         
+                                   
+                                   
+                v-card( width="600px"  min-height="700px" flat color="grey lighten-3").pa-6.flex-grow-1.flex-shrink-1  
+                    v-card-title.text-h6 
+                        span Current Browser Support:
+                    v-card-subtitle.text-h5
+                        v-chip-group(row) 
+                            v-chip(color="orange lighten-3") Edge 
+                            v-chip(color="red lighten-3") Firefox  
+                            v-chip(color="orange lighten-3") Chrome  
+                            v-chip(color="red lighten-3") Safari 
+                    v-card-text.text-h6 
+                        v-tabs(v-model="tab7"  background-color="purple lighten-5" color="deep-purple accent-4" right) 
+                            v-tab(v-for="(item,ix1) in items" :key="ix1" ) {{item}}
+                            v-tabs-items(v-model="tab7") 
+                                v-tab-item
+                                    v-card(outlined height="460px" ).obf
+                                        v-card-text 
+                                            pre 
+                                                //- code 
+                                                div.text-h4 div.parent10
+                                                div.text-h4      div.card
+                                                div.text-h4         h3 Video Title
+                                                div.text-h4         div.visual
+                                                div.text-h4         p Descriptive Text. This demo works in Chromium 84+. 
+                                              
+                                v-tab-item
+                                    v-card(outlined height="460px" ).obf
+                                        v-card-text
+                                            pre 
+                                                //- code 
+                                                div.text-h4 .parent10 {
+                                                div.text-h4     display: grid;
+                                                div.text-h4     place-items: center;
+                                                div.text-h4     width: 500px;
+                                                div.text-h4     height: 500px;
+                                                div.text-h4 } 
+                                                div.text-h4 .parent10 div.card {
+                                                div.text-h4     width: 80%;
+                                                div.text-h4     display: flex;
+                                                div.text-h4     justify-content: space-between;
+                                                div.text-h4     flex-direction: column;
+                                                div.text-h4     background-color: lightyellow;
+                                                div.text-h4     padding: 1rem;
+                                                div.text-h4     font-size: 2rem;
+                                                div.text-h4 }
+                                                div.text-h4 .parent10 div.visual {
+                                                div.text-h4     aspect-ratio: 16/9;
+                                                div.text-h4     margin: 0.5rem 0;
+                                                div.text-h4 } 
                                                 
                   
     v-row 
@@ -1578,5 +2175,304 @@ export default {
   margin: 8px;
   text-align: center;
   font-size: 2rem;
+}
+// 03 Sidebar Says
+.parent3 {
+  display: grid;
+  grid-template-columns: minmax(150px, 25%) 1fr;
+
+  align-items: center;
+  width: 500px;
+  height: 500px;
+
+  resize: both;
+  overflow: auto;
+
+  position: absolute;
+  z-index: 1;
+  border: 1px solid grey;
+}
+.parent3 .sidebar {
+  height: 100%;
+  background: lightyellow;
+  font-size: 2rem;
+  text-align: center;
+}
+.parent3 .content {
+  height: 100%;
+  background: plum;
+  padding: 2rem;
+  font-size: 2rem;
+}
+// 04 Pancake Stack
+.parent4 {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+
+  align-items: center;
+  width: 500px;
+  height: 500px;
+
+  resize: both;
+  overflow: auto;
+
+  position: absolute;
+  z-index: 1;
+  border: 1px solid grey;
+}
+.parent4 header {
+  background: lightblue;
+  padding: 2rem;
+  font-size: 2rem;
+}
+
+.parent4 main {
+  background: lightsalmon;
+  height: 100%;
+  padding: 2rem;
+  font-size: 2rem;
+}
+
+.parent4 footer {
+  background: plum;
+  height: 100%;
+  padding: 2rem;
+  font-size: 2rem;
+}
+// 05 Classic Holy Grail Layout
+.parent5 {
+  display: grid;
+  grid-template: auto 1fr auto / auto 1fr auto;
+
+  align-items: center;
+  width: 500px;
+  height: 500px;
+
+  resize: both;
+  overflow: auto;
+
+  position: absolute;
+  z-index: 1;
+  border: 1px solid grey;
+}
+.parent5 header {
+  background: lightpink;
+  padding: 2rem;
+  font-size: 2rem;
+  height: 100%;
+  grid-column: 1 / 4;
+}
+.parent5 aside.leftSide {
+  grid-column: 1 / 2;
+  background: lightblue;
+  padding: 2rem;
+  font-size: 2rem;
+  height: 100%;
+}
+.parent5 main {
+  background: lightsalmon;
+  height: 100%;
+  padding: 2rem;
+  font-size: 2rem;
+  height: 100%;
+  grid-column: 2 / 3;
+}
+.parent5 aside.rightSide {
+  background: lightyellow;
+  padding: 2rem;
+  font-size: 2rem;
+  height: 100%;
+  grid-column: 3/ 4;
+}
+.parent5 footer {
+  background: lightgreen;
+  padding: 2rem;
+  font-size: 2rem;
+  height: 100%;
+  grid-column: 1 / 4;
+}
+// 06. 12-Span Grid
+.parent6 {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+
+  align-items: center;
+  width: 500px;
+  height: 500px;
+
+  resize: both;
+  overflow: auto;
+
+  position: absolute;
+  z-index: 1;
+  border: 1px solid grey;
+}
+.parent6 div.span-12 {
+  background: lightgreen;
+  padding: 2rem;
+  font-size: 2rem;
+  height: 100%;
+  grid-column: 1 / span 12;
+}
+.parent6 div.span-6 {
+  background: lightpink;
+  padding: 2rem;
+  font-size: 2rem;
+  height: 100%;
+  grid-column: 1 / span 6;
+}
+.parent6 div.span-4 {
+  background: lightblue;
+  padding: 2rem;
+  font-size: 2rem;
+  height: 100%;
+  grid-column: 4 / span 4;
+}
+.parent6 div.span-2 {
+  background: lightyellow;
+  padding: 2rem;
+  font-size: 2rem;
+  height: 100%;
+  grid-column: 3 / span 2;
+}
+// 07. RAM (Repeat, Auto, Minmax)
+.parent7 {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
+  align-items: center;
+  width: 500px;
+  height: 500px;
+
+  resize: both;
+  overflow: auto;
+
+  position: absolute;
+  z-index: 1;
+  border: 1px solid grey;
+}
+.parent7 div.box {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  font-size: 2rem;
+  border-radius: 10px;
+}
+.parent7 div.box1 {
+  background: lightpink;
+}
+.parent7 div.box2 {
+  background: plum;
+}
+.parent7 div.box3 {
+  background: lightblue;
+}
+.parent7 div.box4 {
+  background: lightgreen;
+}
+// 08. Line Up
+.parent8 {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+
+  align-items: center;
+  width: 500px;
+  height: 500px;
+
+  resize: both;
+  overflow: auto;
+
+  position: absolute;
+  z-index: 1;
+  border: 1px solid grey;
+}
+.parent8 div.card {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: lightyellow;
+  padding: 1rem;
+  height: 400px;
+  font-size: 2rem;
+}
+.parent8 div.visual {
+  height: 100px;
+  width: 100%;
+  margin: 0.5rem 0;
+}
+.parent8 div.visual1 {
+  background: lightpink;
+}
+.parent8 div.visual2 {
+  background: plum;
+}
+.parent8 div.visual3 {
+  background: lightblue;
+}
+//  09. Clamping My Style
+.parent9 {
+  display: grid;
+  place-items: center;
+
+  align-items: center;
+  width: 500px;
+  height: 500px;
+
+  resize: both;
+  overflow: auto;
+
+  position: absolute;
+  z-index: 1;
+  border: 1px solid grey;
+}
+.parent9 div.card {
+  width: clamp(23ch, 50%, 46ch);
+  height: 400px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: lightyellow;
+  padding: 1rem;
+
+  font-size: 2rem;
+}
+.parent9 div.visual {
+  height: 100px;
+  width: 100%;
+  margin: 0.5rem 0;
+}
+.parent9 div.visual1 {
+  background: lightpink;
+}
+//  10. Respect for Aspect
+.parent10 {
+  display: grid;
+  place-items: center;
+
+  align-items: center;
+  width: 500px;
+  height: 500px;
+
+  resize: both;
+  overflow: auto;
+
+  position: absolute;
+  z-index: 1;
+  border: 1px solid grey;
+}
+.parent10 div.card {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: lightyellow;
+  padding: 1rem;
+  font-size: 2rem;
+}
+.parent10 div.visual {
+  aspect-ratio: 16/9;
+  margin: 0.5rem 0;
 }
 </style>
